@@ -1,0 +1,3806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Olumide Kayode - Technology, Data Analytics, Cybersecurity, Software Development and Revenue Assurance Professional.">
+
+    <meta name="keywords"
+          content="Olumide Kayode, Data Analyst, Data Scientist, Software Developer, IT Audit, Cybersecurity, Revenue Assurance, Python, SQL, R, Power BI">
+
+    <meta name="author"
+          content="Olumide Kayode">
+
+    <title>
+        Olumide Kayode | Technology • Data • Cybersecurity • Revenue Assurance
+    </title>
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =========================================================
+         BOOTSTRAP
+    ========================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- =========================================================
+         BOOTSTRAP ICONS
+    ========================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================================
+           GLOBAL VARIABLES
+        ========================================================== */
+
+        :root {
+
+            --bg: #06101d;
+            --bg2: #0a1727;
+            --card: rgba(14, 29, 48, .75);
+
+            --white: #f5f8ff;
+            --text: #d7e1ee;
+            --muted: #91a2b8;
+            --text-muted: #91a2b8;
+
+            --blue: #38bdf8;
+            --cyan: #22d3ee;
+            --purple: #818cf8;
+            --green: #34d399;
+
+            --border: rgba(255,255,255,.09);
+
+            --gradient:
+                linear-gradient(
+                    135deg,
+                    #38bdf8,
+                    #818cf8,
+                    #c084fc
+                );
+
+            --radius: 24px;
+
+            --shadow: 0 20px 55px rgba(0,0,0,.25);
+
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            color: var(--white);
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(56,189,248,.09),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(129,140,249,.09),
+                    transparent 30%
+                ),
+
+                var(--bg);
+
+            line-height: 1.7;
+
+            overflow-x: hidden;
+
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        section {
+            padding: 110px 0;
+            position: relative;
+        }
+
+
+        .container {
+            max-width: 1180px;
+        }
+
+
+        /* =========================================================
+           UTILITIES
+        ========================================================== */
+
+        .gradient-text {
+
+            background: var(--gradient);
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+
+        }
+
+
+        .mono {
+            font-family: "JetBrains Mono", monospace;
+        }
+
+
+        .section-label {
+
+            display: inline-flex;
+
+            padding: 7px 13px;
+
+            border-radius: 100px;
+
+            border: 1px solid rgba(56,189,248,.2);
+
+            background: rgba(56,189,248,.05);
+
+            color: var(--blue);
+
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: .72rem;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .section-title {
+
+            font-size: clamp(2rem, 4vw, 3.2rem);
+
+            font-weight: 800;
+
+            letter-spacing: -.05em;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .section-description {
+
+            color: var(--muted);
+
+            max-width: 700px;
+
+        }
+
+
+        .section-subtitle {
+
+            color: var(--muted);
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            font-size: .95rem;
+
+        }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================== */
+
+        .btn-main {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 13px 22px;
+
+            border-radius: 12px;
+
+            background: var(--gradient);
+
+            color: white;
+
+            font-weight: 700;
+
+            border: none;
+
+            transition: .3s;
+
+        }
+
+
+        .btn-main:hover {
+
+            transform: translateY(-3px);
+
+            color: white;
+
+            box-shadow:
+                0 15px 40px rgba(56,189,248,.25);
+
+        }
+
+
+        .btn-outline-main {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 12px 22px;
+
+            border-radius: 12px;
+
+            border: 1px solid var(--border);
+
+            color: white;
+
+            background: rgba(255,255,255,.03);
+
+            transition: .3s;
+
+        }
+
+
+        .btn-outline-main:hover {
+
+            border-color: var(--blue);
+
+            color: var(--blue);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================== */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 18px 0;
+
+            background:
+                rgba(6,16,29,.72);
+
+            backdrop-filter: blur(20px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,.05);
+
+        }
+
+
+        .navbar-brand {
+
+            font-weight: 800;
+
+            font-size: 1.2rem;
+
+        }
+
+
+        .navbar-brand span {
+            color: var(--blue);
+        }
+
+
+        .nav-link {
+
+            color: #a9b8ca !important;
+
+            font-size: .85rem;
+
+            font-weight: 600;
+
+            margin-left: 20px;
+
+            transition: .3s;
+
+        }
+
+
+        .nav-link:hover,
+        .nav-link.active {
+
+            color: white !important;
+
+        }
+
+
+        .navbar-toggler {
+
+            border: 1px solid var(--border);
+
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================== */
+
+        #home {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding-top: 150px;
+
+            overflow: hidden;
+
+        }
+
+
+        .hero-grid {
+
+            position: absolute;
+
+            inset: 0;
+
+            opacity: .25;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+        }
+
+
+        .hero-glow {
+
+            position: absolute;
+
+            width: 600px;
+
+            height: 600px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(56,189,248,.08);
+
+            filter: blur(100px);
+
+            right: -200px;
+
+            top: 5%;
+
+        }
+
+
+        .hero-status {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 7px 12px;
+
+            border-radius: 100px;
+
+            border: 1px solid rgba(52,211,153,.2);
+
+            color: #6ee7b7;
+
+            background: rgba(52,211,153,.05);
+
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: .72rem;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .status-dot {
+
+            width: 8px;
+
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: var(--green);
+
+            box-shadow:
+                0 0 12px var(--green);
+
+        }
+
+
+        .hero-title {
+
+            font-size:
+                clamp(3.2rem, 7vw, 6.2rem);
+
+            font-weight: 800;
+
+            line-height: .97;
+
+            letter-spacing: -.07em;
+
+        }
+
+
+        .hero-subtitle {
+
+            max-width: 760px;
+
+            color: var(--muted);
+
+            font-size: 1.08rem;
+
+            margin-top: 27px;
+
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 32px;
+
+        }
+
+
+        .hero-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 27px;
+
+        }
+
+
+        .hero-tag {
+
+            padding: 6px 10px;
+
+            border-radius: 7px;
+
+            background: rgba(255,255,255,.035);
+
+            border: 1px solid var(--border);
+
+            color: #b9c7d8;
+
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: .7rem;
+
+        }
+
+
+        /* =========================================================
+           PROFILE IMAGE — CIRCULAR
+        ========================================================== */
+
+        .profile-wrapper {
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+
+        .profile-card {
+
+            width: min(100%, 390px);
+
+            padding: 17px;
+
+            border-radius: 30px;
+
+            background: rgba(15,29,48,.75);
+
+            border: 1px solid var(--border);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,.35);
+
+            transform: rotate(2deg);
+
+            transition: .5s;
+
+        }
+
+
+        .profile-card:hover {
+
+            transform:
+                rotate(0deg)
+                translateY(-10px);
+
+        }
+
+
+        .profile-image-ring {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 300px;
+
+            aspect-ratio: 1 / 1;
+
+            margin: 6px auto 4px;
+
+            padding: 6px;
+
+            border-radius: 50%;
+
+            background: var(--gradient);
+
+            box-shadow:
+                0 18px 44px rgba(56,189,248,.28);
+
+        }
+
+
+        .profile-image {
+
+            width: 100%;
+
+            height: 100%;
+
+            aspect-ratio: 1 / 1;
+
+            object-fit: cover;
+
+            object-position: center top;
+
+            border-radius: 50%;
+
+            display: block;
+
+            border: 4px solid rgba(6,16,29,.95);
+
+            transition: transform .5s ease;
+
+        }
+
+
+        .profile-image-ring:hover .profile-image {
+
+            transform: scale(1.05);
+
+        }
+
+
+        .profile-info {
+
+            padding: 20px 7px 5px;
+
+            text-align: center;
+
+        }
+
+
+        .profile-name {
+
+            font-size: 1.2rem;
+
+            font-weight: 800;
+
+        }
+
+
+        .profile-role {
+
+            color: var(--muted);
+
+            font-size: .8rem;
+
+            margin-top: 3px;
+
+        }
+
+
+        .profile-badges {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 14px;
+
+            justify-content: center;
+
+        }
+
+
+        .profile-badge {
+
+            font-size: .65rem;
+
+            padding: 5px 8px;
+
+            border-radius: 6px;
+
+            color: #8edcff;
+
+            background: rgba(56,189,248,.07);
+
+            border: 1px solid rgba(56,189,248,.12);
+
+        }
+
+
+        /* =========================================================
+           STATS
+        ========================================================== */
+
+        .stats {
+
+            padding: 35px 0;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+
+            background: rgba(255,255,255,.015);
+
+        }
+
+
+        .stat {
+            text-align: center;
+        }
+
+
+        .stat-number {
+
+            font-size: 2rem;
+
+            font-weight: 800;
+
+        }
+
+
+        .stat-label {
+
+            color: var(--muted);
+
+            font-size: .75rem;
+
+        }
+
+
+        /* =========================================================
+           GLASS CARDS
+        ========================================================== */
+
+        .glass-card {
+
+            background:
+                rgba(14,29,48,.7);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 30px;
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 20px 55px rgba(0,0,0,.15);
+
+            transition: .35s;
+
+        }
+
+
+        .glass-card:hover {
+
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(56,189,248,.25);
+
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================== */
+
+        .about-highlight {
+
+            font-size: 1.25rem;
+
+            font-weight: 600;
+
+        }
+
+
+        .about-text {
+
+            color: var(--muted);
+
+        }
+
+
+        .about-list {
+
+            list-style: none;
+
+            padding: 0;
+
+        }
+
+
+        .about-list li {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 16px;
+
+            color: #c5d0de;
+
+        }
+
+
+        .about-list i {
+
+            color: var(--blue);
+
+        }
+
+
+        /* =========================================================
+           SERVICES
+        ========================================================== */
+
+        .service-card {
+            height: 100%;
+        }
+
+
+        .service-icon {
+
+            width: 54px;
+
+            height: 54px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background:
+                rgba(56,189,248,.08);
+
+            color: var(--blue);
+
+            font-size: 1.45rem;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .service-card h3 {
+
+            font-size: 1.1rem;
+
+            font-weight: 750;
+
+        }
+
+
+        .service-card p {
+
+            color: var(--muted);
+
+            font-size: .87rem;
+
+        }
+
+
+        /* =========================================================
+           SKILLS
+        ========================================================== */
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+
+        .skill-head {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 8px;
+
+            font-size: .82rem;
+
+        }
+
+
+        .skill-percent {
+
+            color: var(--blue);
+
+            font-family:
+                "JetBrains Mono", monospace;
+
+        }
+
+
+        .skill-bar {
+
+            height: 7px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.06);
+
+            overflow: hidden;
+
+        }
+
+
+        .skill-progress {
+
+            height: 100%;
+
+            width: 0;
+
+            border-radius: 20px;
+
+            background: var(--gradient);
+
+            transition: width 1.5s ease;
+
+        }
+
+
+        .tech-cloud {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+        }
+
+
+        .tech {
+
+            padding: 8px 10px;
+
+            border-radius: 8px;
+
+            background:
+                rgba(255,255,255,.035);
+
+            border: 1px solid var(--border);
+
+            color: #c6d3e2;
+
+            font-family:
+                "JetBrains Mono", monospace;
+
+            font-size: .68rem;
+
+            transition: .25s;
+
+        }
+
+
+        .tech:hover {
+
+            border-color: var(--blue);
+
+            color: var(--blue);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =========================================================
+           EXPERIENCE TIMELINE
+        ========================================================== */
+
+        .timeline {
+
+            position: relative;
+
+            padding-left: 35px;
+
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 6px;
+
+            top: 5px;
+
+            bottom: 5px;
+
+            width: 1px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    var(--blue),
+                    transparent
+                );
+
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .timeline-item::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -35px;
+
+            top: 6px;
+
+            width: 13px;
+
+            height: 13px;
+
+            border-radius: 50%;
+
+            background: var(--blue);
+
+            border: 3px solid var(--bg);
+
+            box-shadow:
+                0 0 0 3px rgba(56,189,248,.15);
+
+        }
+
+
+        .timeline-date {
+
+            color: var(--blue);
+
+            font-family:
+                "JetBrains Mono", monospace;
+
+            font-size: .7rem;
+
+        }
+
+
+        .timeline-title {
+
+            font-size: 1.2rem;
+
+            font-weight: 750;
+
+            margin-top: 5px;
+
+        }
+
+
+        .timeline-company {
+
+            color: #c0ccda;
+
+            font-size: .85rem;
+
+            margin: 4px 0 10px;
+
+        }
+
+
+        .timeline-description {
+
+            color: var(--muted);
+
+            font-size: .87rem;
+
+        }
+
+
+        /* =========================================================
+           PROJECT CATEGORY SLIDERS
+        ========================================================== */
+
+        .projects-section {
+
+            padding: 110px 0;
+
+            position: relative;
+
+        }
+
+
+        .project-category {
+
+            margin-bottom: 75px;
+
+        }
+
+
+        .project-category-heading {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .project-category-heading i {
+
+            font-size: 1.6rem;
+
+            color: var(--blue);
+
+        }
+
+
+        .project-category-heading h3 {
+
+            margin: 0;
+
+            font-size: 1.6rem;
+
+            font-weight: 800;
+
+        }
+
+
+        .project-category-heading p {
+
+            margin: 5px 0 0;
+
+            color: var(--text-muted);
+
+            font-size: .9rem;
+
+        }
+
+
+        /* R category — custom SVG logo sizing */
+
+        .project-category-heading .r-logo {
+
+            display: inline-flex;
+
+            width: 26px;
+
+            height: 26px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .project-category-heading .r-logo svg {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+        }
+
+
+        /* Tint the R logo circle to match the theme accent */
+
+        .project-category:nth-of-type(4) .r-logo svg circle {
+
+            fill: #7c8fff;
+
+        }
+
+
+        /* Scrolling gallery wrapper */
+
+        .project-slider {
+
+            width: 100%;
+
+            overflow: hidden;
+
+            position: relative;
+
+            border-radius: 22px;
+
+            mask-image: linear-gradient(
+                to right,
+                transparent,
+                black 5%,
+                black 95%,
+                transparent
+            );
+
+            -webkit-mask-image: linear-gradient(
+                to right,
+                transparent,
+                black 5%,
+                black 95%,
+                transparent
+            );
+
+        }
+
+
+        /* Moving track */
+
+        .project-slider .project-track {
+
+            display: flex;
+
+            width: max-content;
+
+            gap: 22px;
+
+            animation: projectScroll 35s linear infinite;
+
+        }
+
+
+        /* Reverse movement */
+
+        .project-slider .project-track.reverse {
+
+            animation-direction: reverse;
+
+        }
+
+
+        /* Pause on hover */
+
+        .project-slider:hover .project-track {
+
+            animation-play-state: paused;
+
+        }
+
+
+        /* Project visual card */
+
+        .project-visual-card {
+
+            width: 310px;
+
+            min-width: 310px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            transition: .3s ease;
+
+            backdrop-filter: blur(18px);
+
+        }
+
+
+        .project-visual-card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: rgba(56, 189, 248, .45);
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        /* Project image */
+
+        .project-visual-image {
+
+            width: 100%;
+
+            height: 205px;
+
+            object-fit: cover;
+
+            display: block;
+
+        }
+
+
+        /* Project information */
+
+        .project-visual-content {
+
+            padding: 22px;
+
+        }
+
+
+        .project-visual-content h4 {
+
+            font-size: 1.05rem;
+
+            font-weight: 800;
+
+            margin-bottom: 8px;
+
+            color: var(--white);
+
+        }
+
+
+        .project-visual-content p {
+
+            color: var(--text-muted);
+
+            font-size: .86rem;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .project-visual-link {
+
+            color: var(--blue);
+
+            font-size: .85rem;
+
+            font-weight: 700;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            transition: .3s;
+
+        }
+
+
+        .project-visual-link:hover {
+
+            color: var(--cyan);
+
+        }
+
+
+        .project-visual-link i {
+
+            font-size: .8rem;
+
+        }
+
+
+        /* Continuous scrolling animation */
+
+        @keyframes projectScroll {
+
+            from { transform: translateX(0); }
+
+            to   { transform: translateX(-50%); }
+
+        }
+
+
+        /* =========================================================
+           EDUCATION
+        ========================================================== */
+
+        .education-item {
+
+            padding: 21px 0;
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .education-item:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .education-year {
+
+            color: var(--blue);
+
+            font-family:
+                "JetBrains Mono", monospace;
+
+            font-size: .68rem;
+
+        }
+
+
+        .education-title {
+
+            font-weight: 700;
+
+            margin-top: 4px;
+
+        }
+
+
+        .education-school {
+
+            color: var(--muted);
+
+            font-size: .82rem;
+
+        }
+
+
+        .cert-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 10px;
+
+        }
+
+
+        .cert {
+
+            padding: 13px;
+
+            border-radius: 11px;
+
+            background:
+                rgba(255,255,255,.03);
+
+            border:
+                1px solid var(--border);
+
+            font-size: .76rem;
+
+        }
+
+
+        .cert i {
+
+            color: var(--blue);
+
+            margin-right: 5px;
+
+        }
+
+
+        /* =========================================================
+           CONTACT
+        ========================================================== */
+
+        .contact-card {
+
+            text-align: center;
+
+            padding: 50px 30px;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(56,189,248,.12),
+                    transparent 45%
+                ),
+
+                var(--card);
+
+        }
+
+
+        .contact-title {
+
+            font-size:
+                clamp(2rem, 4vw, 3.3rem);
+
+            font-weight: 800;
+
+            letter-spacing: -.05em;
+
+        }
+
+
+        .contact-text {
+
+            max-width: 650px;
+
+            margin:
+                15px auto 30px;
+
+            color: var(--muted);
+
+        }
+
+
+        .contact-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+        }
+
+
+        .contact-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 11px 15px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 10px;
+
+            color: #c7d3e1;
+
+            background:
+                rgba(255,255,255,.03);
+
+            font-size: .78rem;
+
+            transition: .3s;
+
+        }
+
+
+        .contact-link:hover {
+
+            color: var(--blue);
+
+            border-color: var(--blue);
+
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================== */
+
+        footer {
+
+            padding: 35px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: .75rem;
+
+        }
+
+
+        .footer-name {
+
+            color: white;
+
+            font-weight: 750;
+
+        }
+
+
+        .social-links {
+
+            display: flex;
+
+            gap: 8px;
+
+            justify-content: flex-end;
+
+        }
+
+
+        .social-link {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                rgba(255,255,255,.03);
+
+            transition: .3s;
+
+        }
+
+
+        .social-link:hover {
+
+            color: var(--blue);
+
+            border-color: var(--blue);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================== */
+
+        #backTop {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                rgba(10,23,39,.92);
+
+            border:
+                1px solid var(--border);
+
+            color: white;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .3s;
+
+            z-index: 100;
+
+        }
+
+
+        #backTop.show {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+        #backTop:hover {
+
+            color: var(--blue);
+
+            border-color: var(--blue);
+
+        }
+
+
+        /* =========================================================
+           SCROLL PROGRESS
+        ========================================================== */
+
+        #scrollProgress {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            height: 3px;
+
+            width: 0%;
+
+            background: var(--gradient);
+
+            z-index: 2000;
+
+        }
+
+
+        /* =========================================================
+           REVEAL ANIMATION
+        ========================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================== */
+
+        @media (max-width: 991px) {
+
+            section {
+                padding: 85px 0;
+            }
+
+            .profile-wrapper {
+                margin-top: 50px;
+            }
+
+            .navbar-collapse {
+
+                margin-top: 15px;
+
+                padding: 15px;
+
+                border-radius: 15px;
+
+                background:
+                    rgba(6,16,29,.96);
+
+            }
+
+            .nav-link {
+                margin: 7px 0;
+            }
+
+            .social-links {
+
+                justify-content:
+                    flex-start;
+
+                margin-top: 15px;
+
+            }
+
+        }
+
+
+        @media (max-width: 576px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero-title {
+                font-size: 3.1rem;
+            }
+
+            .glass-card {
+                padding: 22px;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-visual-card {
+                width: 270px;
+                min-width: 270px;
+            }
+
+            .project-visual-image {
+                height: 180px;
+            }
+
+            .project-category-heading h3 {
+                font-size: 1.3rem;
+            }
+
+            .project-category {
+                margin-bottom: 55px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SCROLL PROGRESS
+========================================================= -->
+
+<div id="scrollProgress"></div>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            Olumide Kayode<span>.</span>
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav">
+
+            <i class="bi bi-list text-white fs-4"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Expertise</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Credentials</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="home">
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-glow"></div>
+
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-7">
+
+                <div class="hero-status">
+
+                    <span class="status-dot"></span>
+
+                    Open to Remote & Strategic Opportunities
+
+                </div>
+
+
+                <h1 class="hero-title">
+
+                    Technology.
+
+                    <br>
+
+                    <span class="gradient-text">
+                        Data.
+                    </span>
+
+                    Security.
+
+                    <br>
+
+                    <span class="gradient-text">
+                        Revenue.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-subtitle">
+
+                    I bridge banking, technology, cybersecurity,
+                    data analytics and revenue assurance to transform
+                    complex business problems into measurable,
+                    technology-driven solutions.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn-main">
+
+                        <i class="bi bi-grid me-2"></i>
+
+                        Explore My Projects
+
+                    </a>
+
+
+                    <a href="#contact" class="btn-outline-main">
+
+                        <i class="bi bi-chat-dots me-2"></i>
+
+                        Let's Connect
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-tags">
+
+                    <span class="hero-tag">SQL</span>
+                    <span class="hero-tag">Python</span>
+                    <span class="hero-tag">R</span>
+                    <span class="hero-tag">Power BI</span>
+                    <span class="hero-tag">Cybersecurity</span>
+                    <span class="hero-tag">IT Audit</span>
+                    <span class="hero-tag">Revenue Assurance</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PROFILE IMAGE (CIRCULAR)
+            ================================================== -->
+
+            <div class="col-lg-5">
+
+                <div class="profile-wrapper">
+
+                    <div class="profile-card">
+
+                        <div class="profile-image-ring">
+
+                            <!--
+                                NOTE:
+                                This uses the local Windows path.
+                                It will only work on YOUR computer.
+
+                                To use it online, copy IMG_2250.jpg into
+                                an "assets" folder next to this file, then
+                                change src to:  assets/IMG_2250.jpg
+                            -->
+
+                            <img
+                                src="file:///C:/Users/USER/Downloads/IMG_2250.jpg"
+                                class="profile-image"
+                                alt="Olumide Kayode">
+
+                        </div>
+
+                        <div class="profile-info">
+
+                            <div class="profile-name">
+                                Olumide Kayode
+                            </div>
+
+                            <div class="profile-role">
+
+                                Technology • Data • Cybersecurity
+                                • Revenue Assurance
+
+                            </div>
+
+
+                            <div class="profile-badges">
+
+                                <span class="profile-badge">ACA</span>
+                                <span class="profile-badge">CISA</span>
+                                <span class="profile-badge">CISM</span>
+                                <span class="profile-badge">ISO 27001 LA</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STATS
+========================================================= -->
+
+<div class="stats">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="stat">
+                    <div class="stat-number">18+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Core Expertise Areas</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="section-label">
+                    01 / About Me
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Where business meets
+
+                    <span class="gradient-text">
+                        technology.
+                    </span>
+
+                </h2>
+
+
+                <p class="about-highlight">
+
+                    I am a multidisciplinary professional combining
+                    accounting, banking, audit, technology,
+                    data analytics and software development.
+
+                </p>
+
+
+                <p class="about-text">
+
+                    My professional experience spans banking operations,
+                    internal control, information technology audit,
+                    information security, revenue assurance,
+                    data analytics and software development.
+
+                </p>
+
+
+                <p class="about-text">
+
+                    I work with complex financial and operational datasets
+                    to identify anomalies, detect revenue leakage,
+                    strengthen controls, automate processes and support
+                    data-driven business decisions.
+
+                </p>
+
+
+                <p class="about-text">
+
+                    My unique advantage is the ability to understand
+                    both the business problem and the technology required
+                    to solve it.
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="glass-card">
+
+                    <ul class="about-list">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Banking and financial control expertise</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Data analytics using SQL, Python, R and Power BI</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>IT audit and information security controls</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Revenue assurance and leakage detection</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Software development and database solutions</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Automation and management reporting</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Data quality and reconciliation</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+
+            <div class="section-label">
+                02 / Expertise
+            </div>
+
+            <h2 class="section-title">
+
+                What I
+
+                <span class="gradient-text">
+                    do.
+                </span>
+
+            </h2>
+
+            <p class="section-description mx-auto">
+
+                Four complementary disciplines that allow me to
+                solve business problems from strategy through
+                implementation.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h3>Technology & InfoSec</h3>
+                    <p>
+                        IT controls, cybersecurity, technology risk,
+                        application controls, database security,
+                        audit and compliance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>
+                        SQL, Python, R, Power BI, statistical analysis,
+                        data quality, reconciliation and business
+                        intelligence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h3>Revenue Assurance</h3>
+                    <p>
+                        Revenue leakage detection, transaction analysis,
+                        income validation, reconciliation and product
+                        control.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="glass-card service-card">
+                    <div class="service-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h3>Software Development</h3>
+                    <p>
+                        Business applications, automation tools,
+                        database solutions, reporting platforms
+                        and analytical applications.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="section-label">
+                    03 / Technical Skills
+                </div>
+
+
+                <h2 class="section-title">
+
+                    My technical
+
+                    <span class="gradient-text">
+                        toolkit.
+                    </span>
+
+                </h2>
+
+
+                <p class="section-description mb-5">
+
+                    Combining analytical thinking, programming,
+                    database technology, business intelligence
+                    and governance.
+
+                </p>
+
+
+                <div class="skill">
+                    <div class="skill-head">
+                        <span>SQL & Database Analytics</span>
+                        <span class="skill-percent">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="92%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-head">
+                        <span>Python & Data Analytics</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-head">
+                        <span>R Programming</span>
+                        <span class="skill-percent">78%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="78%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-head">
+                        <span>Power BI</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="88%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-head">
+                        <span>IT Audit & Controls</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-head">
+                        <span>Revenue Assurance</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="glass-card">
+
+                    <h4 class="mb-4">Technology Stack</h4>
+
+                    <div class="tech-cloud">
+                        <span class="tech">Python</span>
+                        <span class="tech">SQL</span>
+                        <span class="tech">R</span>
+                        <span class="tech">Power BI</span>
+                        <span class="tech">DAX</span>
+                        <span class="tech">Power Query</span>
+                        <span class="tech">Excel</span>
+                        <span class="tech">Tidyverse</span>
+                        <span class="tech">ggplot2</span>
+                        <span class="tech">dplyr</span>
+                        <span class="tech">Pandas</span>
+                        <span class="tech">NumPy</span>
+                        <span class="tech">Java</span>
+                        <span class="tech">C#</span>
+                        <span class="tech">.NET</span>
+                        <span class="tech">PHP</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">HTML5</span>
+                        <span class="tech">CSS3</span>
+                        <span class="tech">Bootstrap</span>
+                        <span class="tech">jQuery</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">SQL Server</span>
+                        <span class="tech">Oracle</span>
+                        <span class="tech">ACL</span>
+                        <span class="tech">Tableau</span>
+                    </div>
+
+                    <hr class="border-secondary my-4">
+
+                    <h4 class="mb-4">Domain Expertise</h4>
+
+                    <div class="tech-cloud">
+                        <span class="tech">Core Banking</span>
+                        <span class="tech">Revenue Assurance</span>
+                        <span class="tech">IT Audit</span>
+                        <span class="tech">Cybersecurity</span>
+                        <span class="tech">Data Governance</span>
+                        <span class="tech">Data Quality</span>
+                        <span class="tech">Internal Control</span>
+                        <span class="tech">Banking Products</span>
+                        <span class="tech">IFRS</span>
+                        <span class="tech">CBN Regulation</span>
+                        <span class="tech">ISO 27001</span>
+                        <span class="tech">NDPR</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+
+            <div class="section-label">
+                04 / Experience
+            </div>
+
+            <h2 class="section-title">
+
+                Professional
+
+                <span class="gradient-text">
+                    journey.
+                </span>
+
+            </h2>
+
+            <p class="section-description mx-auto">
+
+                More than 18 years of progressive experience
+                across banking, accounting, audit, technology
+                and analytics.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">CURRENT</div>
+                <div class="timeline-title">
+                    Income Assurance — Internal Control & Audit
+                </div>
+                <div class="timeline-company">Zenith Bank</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>Revenue assurance and income validation across banking products and transaction channels.</li>
+                        <li>SQL-based analysis to identify revenue leakage and control exceptions.</li>
+                        <li>Technology and application control reviews supporting audit and governance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2022 — PRESENT</div>
+                <div class="timeline-title">Data Analytics & Revenue Assurance</div>
+                <div class="timeline-company">Zenith Bank</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>Analysed large banking datasets.</li>
+                        <li>Developed SQL, Python and R analytical solutions.</li>
+                        <li>Created dashboards and automated reporting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2019 — 2022</div>
+                <div class="timeline-title">Application & Database Audit / IT Compliance</div>
+                <div class="timeline-company">Zenith Bank</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>Application and database control reviews.</li>
+                        <li>Access management and technology risk assessments.</li>
+                        <li>IT governance and compliance reviews.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2014 — 2019</div>
+                <div class="timeline-title">Branch Supervision & Product Control</div>
+                <div class="timeline-company">Zenith Bank</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>Branch operations and financial controls.</li>
+                        <li>Reconciliations and product monitoring.</li>
+                        <li>Operational risk and financial control.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2005 — 2007</div>
+                <div class="timeline-title">Regional Accountant</div>
+                <div class="timeline-company">ETCO Nigeria Limited</div>
+                <div class="timeline-description">
+                    <ul>
+                        <li>Financial reporting and accounting operations.</li>
+                        <li>Reconciliations and regional financial control.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECTS SECTION — CATEGORY SLIDERS
+========================================================= -->
+
+<section id="projects" class="projects-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5 reveal">
+
+            <span class="section-label">MY WORK</span>
+
+            <h2 class="section-title">
+                Selected <span class="gradient-text">Projects</span>
+            </h2>
+
+            <p class="section-subtitle">
+                A selection of software development, data analytics,
+                business intelligence and technology control projects.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             1. JAVA PROJECTS
+        ================================================== -->
+
+        <div class="project-category">
+
+            <div class="project-category-heading">
+                <i class="bi bi-cup-hot-fill"></i>
+                <div>
+                    <h3>Java Projects</h3>
+                    <p>Object-oriented programming, Java applications and database-driven systems.</p>
+                </div>
+            </div>
+
+
+            <div class="project-slider">
+
+                <div class="project-track">
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/java-audit-workflow.jpg" alt="Audit Workflow Management System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Audit Workflow Management System</h4>
+                            <p>A Java and MySQL application for managing audit activities, assignments and reporting.</p>
+                            <a href="https://github.com/YOUR_USERNAME/audit-workflow-management-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/java-banking-system.jpg" alt="Java Banking System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Java Banking System</h4>
+                            <p>A Java-based banking application demonstrating accounts, transactions and customer records.</p>
+                            <a href="https://github.com/YOUR_USERNAME/java-banking-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/java-inventory-system.jpg" alt="Java Inventory Management System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Inventory Management System</h4>
+                            <p>A desktop-style Java project for inventory, stock movement and reporting.</p>
+                            <a href="https://github.com/YOUR_USERNAME/java-inventory-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards for continuous scrolling -->
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/java-audit-workflow.jpg" alt="Audit Workflow Management System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Audit Workflow Management System</h4>
+                            <p>Java and MySQL application for audit workflow management.</p>
+                            <a href="https://github.com/YOUR_USERNAME/audit-workflow-management-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/java-banking-system.jpg" alt="Java Banking System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Java Banking System</h4>
+                            <p>Java application for accounts and banking transactions.</p>
+                            <a href="https://github.com/YOUR_USERNAME/java-banking-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/java-inventory-system.jpg" alt="Java Inventory Management System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Inventory Management System</h4>
+                            <p>Java inventory and stock management project.</p>
+                            <a href="https://github.com/YOUR_USERNAME/java-inventory-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             2. .NET PROJECTS
+        ================================================== -->
+
+        <div class="project-category">
+
+            <div class="project-category-heading">
+                <i class="bi bi-window-stack"></i>
+                <div>
+                    <h3>.NET Projects</h3>
+                    <p>C#, ASP.NET, SQL Server and enterprise business applications.</p>
+                </div>
+            </div>
+
+
+            <div class="project-slider">
+
+                <div class="project-track reverse">
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/dotnet-reconciliation-portal.jpg" alt="Reconciliation Reporting Portal" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Reconciliation Reporting Portal</h4>
+                            <p>A .NET and SQL Server portal for automated reconciliation and exception reporting.</p>
+                            <a href="https://github.com/YOUR_USERNAME/reconciliation-reporting-portal" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/dotnet-finance-system.jpg" alt="Financial Management Application" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Financial Management Application</h4>
+                            <p>A C# application for financial records, transaction processing and reporting.</p>
+                            <a href="https://github.com/YOUR_USERNAME/financial-management-application" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/dotnet-reporting-system.jpg" alt="Enterprise Reporting System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Enterprise Reporting System</h4>
+                            <p>A business reporting solution built with .NET, C# and SQL Server.</p>
+                            <a href="https://github.com/YOUR_USERNAME/enterprise-reporting-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards -->
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/dotnet-reconciliation-portal.jpg" alt="Reconciliation Reporting Portal" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Reconciliation Reporting Portal</h4>
+                            <p>Automated reconciliation and exception reporting portal.</p>
+                            <a href="https://github.com/YOUR_USERNAME/reconciliation-reporting-portal" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/dotnet-finance-system.jpg" alt="Financial Management Application" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Financial Management Application</h4>
+                            <p>C# and SQL Server financial application.</p>
+                            <a href="https://github.com/YOUR_USERNAME/financial-management-application" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/dotnet-reporting-system.jpg" alt="Enterprise Reporting System" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Enterprise Reporting System</h4>
+                            <p>Enterprise reporting application using .NET.</p>
+                            <a href="https://github.com/YOUR_USERNAME/enterprise-reporting-system" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             3. PYTHON PROJECTS
+        ================================================== -->
+
+        <div class="project-category">
+
+            <div class="project-category-heading">
+                <i class="bi bi-filetype-py"></i>
+                <div>
+                    <h3>Python Projects</h3>
+                    <p>Data analytics, automation, data quality and revenue leakage detection.</p>
+                </div>
+            </div>
+
+
+            <div class="project-slider">
+
+                <div class="project-track">
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/python-revenue-leakage.jpg" alt="Revenue Leakage Detection Model" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Revenue Leakage Detection Model</h4>
+                            <p>Python, Pandas and SQL solution for identifying missing, incorrect and undercharged revenue.</p>
+                            <a href="https://github.com/YOUR_USERNAME/revenue-leakage-detection-model" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/python-data-quality.jpg" alt="Data Quality Framework" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Data Quality Framework</h4>
+                            <p>Automated data validation, reconciliation, duplicate checks and exception reporting.</p>
+                            <a href="https://github.com/YOUR_USERNAME/python-data-quality-framework" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/python-banking-analytics.jpg" alt="Banking Data Analytics" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Banking Data Analytics</h4>
+                            <p>Exploratory analysis of banking transactions using Python, NumPy, Pandas and Matplotlib.</p>
+                            <a href="https://github.com/YOUR_USERNAME/banking-data-analytics" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards -->
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/python-revenue-leakage.jpg" alt="Revenue Leakage Detection Model" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Revenue Leakage Detection Model</h4>
+                            <p>Python-based revenue exception detection.</p>
+                            <a href="https://github.com/YOUR_USERNAME/revenue-leakage-detection-model" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/python-data-quality.jpg" alt="Data Quality Framework" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Data Quality Framework</h4>
+                            <p>Python data validation and quality controls.</p>
+                            <a href="https://github.com/YOUR_USERNAME/python-data-quality-framework" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/python-banking-analytics.jpg" alt="Banking Data Analytics" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Banking Data Analytics</h4>
+                            <p>Python analytics and banking transaction study.</p>
+                            <a href="https://github.com/YOUR_USERNAME/banking-data-analytics" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             4. R PROJECTS
+        ================================================== -->
+
+        <div class="project-category">
+
+            <div class="project-category-heading">
+
+                <span class="r-logo" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="#276DC3"/>
+                        <text x="50" y="70"
+                              font-family="Arial, Helvetica, sans-serif"
+                              font-size="62" font-weight="bold"
+                              fill="#ffffff" text-anchor="middle">R</text>
+                    </svg>
+                </span>
+
+                <div>
+                    <h3>R Projects</h3>
+                    <p>Statistical analysis, data science, data quality and exploratory analytics.</p>
+                </div>
+
+            </div>
+
+
+            <div class="project-slider">
+
+                <div class="project-track reverse">
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/r-data-quality-framework.jpg" alt="Data Quality Framework in R" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Data Quality Framework</h4>
+                            <p>An R and tidyverse framework for automated data validation, outlier detection and reconciliation checks.</p>
+                            <a href="https://github.com/YOUR_USERNAME/r-data-quality-framework" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/r-statistical-analysis.jpg" alt="Statistical Analysis and Reporting" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Statistical Analysis & Reporting</h4>
+                            <p>Descriptive statistics, hypothesis testing and trend analysis on large financial datasets using R.</p>
+                            <a href="https://github.com/YOUR_USERNAME/r-statistical-analysis" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/r-banking-exploration.jpg" alt="Banking Data Exploration in R" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Banking Data Exploration</h4>
+                            <p>Exploratory data analysis and visualisation of banking transactions using ggplot2 and dplyr.</p>
+                            <a href="https://github.com/YOUR_USERNAME/r-banking-exploration" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards for continuous scrolling -->
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/r-data-quality-framework.jpg" alt="Data Quality Framework in R" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Data Quality Framework</h4>
+                            <p>R data validation and quality controls for enterprise datasets.</p>
+                            <a href="https://github.com/YOUR_USERNAME/r-data-quality-framework" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/r-statistical-analysis.jpg" alt="Statistical Analysis and Reporting" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Statistical Analysis & Reporting</h4>
+                            <p>R-based statistical analysis and reporting workflows.</p>
+                            <a href="https://github.com/YOUR_USERNAME/r-statistical-analysis" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/r-banking-exploration.jpg" alt="Banking Data Exploration in R" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Banking Data Exploration</h4>
+                            <p>R visualisation and analytics of banking transaction datasets.</p>
+                            <a href="https://github.com/YOUR_USERNAME/r-banking-exploration" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             5. POWER BI PROJECTS
+        ================================================== -->
+
+        <div class="project-category">
+
+            <div class="project-category-heading">
+                <i class="bi bi-bar-chart-fill"></i>
+                <div>
+                    <h3>Power BI Projects</h3>
+                    <p>Interactive dashboards, executive reporting and revenue assurance intelligence.</p>
+                </div>
+            </div>
+
+
+            <div class="project-slider">
+
+                <div class="project-track reverse">
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/powerbi-revenue-dashboard.jpg" alt="Executive Revenue Assurance Dashboard" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Executive Revenue Assurance Dashboard</h4>
+                            <p>Interactive Power BI dashboard showing revenue trends, exceptions and management insights.</p>
+                            <a href="https://github.com/YOUR_USERNAME/executive-revenue-assurance-dashboard" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/powerbi-financial-dashboard.jpg" alt="Financial Performance Dashboard" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Financial Performance Dashboard</h4>
+                            <p>Dashboard for monitoring income, expenses, performance indicators and trends.</p>
+                            <a href="https://github.com/YOUR_USERNAME/financial-performance-dashboard" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/powerbi-audit-dashboard.jpg" alt="Audit Monitoring Dashboard" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Audit Monitoring Dashboard</h4>
+                            <p>Visual reporting of audit findings, exceptions, remediation status and control performance.</p>
+                            <a href="https://github.com/YOUR_USERNAME/audit-monitoring-dashboard" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards -->
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/powerbi-revenue-dashboard.jpg" alt="Executive Revenue Assurance Dashboard" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Executive Revenue Assurance Dashboard</h4>
+                            <p>Power BI revenue intelligence dashboard.</p>
+                            <a href="https://github.com/YOUR_USERNAME/executive-revenue-assurance-dashboard" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/powerbi-financial-dashboard.jpg" alt="Financial Performance Dashboard" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Financial Performance Dashboard</h4>
+                            <p>Power BI financial reporting dashboard.</p>
+                            <a href="https://github.com/YOUR_USERNAME/financial-performance-dashboard" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/powerbi-audit-dashboard.jpg" alt="Audit Monitoring Dashboard" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Audit Monitoring Dashboard</h4>
+                            <p>Audit findings and remediation dashboard.</p>
+                            <a href="https://github.com/YOUR_USERNAME/audit-monitoring-dashboard" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             6. OTHER PROJECTS
+        ================================================== -->
+
+        <div class="project-category">
+
+            <div class="project-category-heading">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <div>
+                    <h3>Other Projects</h3>
+                    <p>Web applications, SQL automation, IT audit, cybersecurity and compliance frameworks.</p>
+                </div>
+            </div>
+
+
+            <div class="project-slider">
+
+                <div class="project-track">
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/reporting-app.jpg" alt="Internal Reporting Web Application" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Internal Reporting Web Application</h4>
+                            <p>A PHP, JavaScript and Bootstrap application for internal business reporting.</p>
+                            <a href="https://github.com/YOUR_USERNAME/internal-reporting-web-app" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/gl-reconciliation.jpg" alt="E-Channel GL Reconciliation Automation" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>E-Channel GL Reconciliation Automation</h4>
+                            <p>SQL and ACL automation for general ledger reconciliation and exception identification.</p>
+                            <a href="https://github.com/YOUR_USERNAME/gl-reconciliation-automation" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/iso-compliance.jpg" alt="ISO Compliance Audit Programme" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>ISO Compliance Audit Programme</h4>
+                            <p>Audit programme supporting ISO 27001, information security and IT governance reviews.</p>
+                            <a href="https://github.com/YOUR_USERNAME/iso-compliance-audit-programme" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate cards -->
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/reporting-app.jpg" alt="Internal Reporting Web Application" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>Internal Reporting Web Application</h4>
+                            <p>PHP, JavaScript and Bootstrap reporting solution.</p>
+                            <a href="https://github.com/YOUR_USERNAME/internal-reporting-web-app" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/gl-reconciliation.jpg" alt="E-Channel GL Reconciliation Automation" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>E-Channel GL Reconciliation Automation</h4>
+                            <p>Automated reconciliation using SQL and ACL.</p>
+                            <a href="https://github.com/YOUR_USERNAME/gl-reconciliation-automation" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-visual-card">
+                        <img src="assets/projects/iso-compliance.jpg" alt="ISO Compliance Audit Programme" class="project-visual-image">
+                        <div class="project-visual-content">
+                            <h4>ISO Compliance Audit Programme</h4>
+                            <p>Information security and IT compliance framework.</p>
+                            <a href="https://github.com/YOUR_USERNAME/iso-compliance-audit-programme" target="_blank" class="project-visual-link">
+                                View Project <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             GITHUB PORTFOLIO CTA
+        ================================================== -->
+
+        <div class="row justify-content-center mt-5 reveal">
+
+            <div class="col-lg-8 text-center">
+
+                <div class="glass-card">
+
+                    <div class="service-icon mx-auto">
+
+                        <i class="bi bi-github"></i>
+
+                    </div>
+
+                    <h3>Explore More on GitHub</h3>
+
+                    <p class="section-description mx-auto mb-4">
+
+                        My GitHub repository showcases software development,
+                        data analytics, automation and technical projects.
+
+                    </p>
+
+                    <a href="https://github.com/YOUR_USERNAME"
+                       target="_blank"
+                       class="btn-main">
+
+                        <i class="bi bi-github me-2"></i>
+
+                        Visit My GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EDUCATION & CERTIFICATIONS
+========================================================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="section-label">
+                    06 / Education
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Education &
+
+                    <span class="gradient-text">
+                        credentials.
+                    </span>
+
+                </h2>
+
+
+                <div class="glass-card mt-4">
+
+                    <div class="education-item">
+                        <div class="education-year">IN VIEW</div>
+                        <div class="education-title">MSc Data Analytics</div>
+                        <div class="education-school">University of East London</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-year">2024</div>
+                        <div class="education-title">BSc. Computer Science</div>
+                        <div class="education-school">University of the People</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-year">2005</div>
+                        <div class="education-title">B.Sc Accounting — Second Class Upper</div>
+                        <div class="education-school">Oxford Brookes University</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-year">2002</div>
+                        <div class="education-title">B.Sc Accounting — Second Class Lower</div>
+                        <div class="education-school">University of Ado Ekiti</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="section-label">
+                    Professional Certifications
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Continuous
+
+                    <span class="gradient-text">
+                        learning.
+                    </span>
+
+                </h2>
+
+
+                <div class="glass-card mt-4">
+
+                    <div class="cert-grid">
+
+                        <div class="cert">
+                            <i class="bi bi-patch-check-fill"></i>
+                            ACA — ICAN
+                        </div>
+
+                        <div class="cert">
+                            <i class="bi bi-patch-check-fill"></i>
+                            CISA
+                        </div>
+
+                        <div class="cert">
+                            <i class="bi bi-patch-check-fill"></i>
+                            CISM
+                        </div>
+
+                        <div class="cert">
+                            <i class="bi bi-patch-check-fill"></i>
+                            ISO/IEC 27001 Lead Auditor
+                        </div>
+
+                        <div class="cert">
+                            <i class="bi bi-patch-check-fill"></i>
+                            Google Data Analytics
+                        </div>
+
+                        <div class="cert">
+                            <i class="bi bi-patch-check-fill"></i>
+                            Data Science
+                        </div>
+
+                        <div class="cert">
+                            <i class="bi bi-hourglass-split"></i>
+                            Meta Database Engineer
+                        </div>
+
+                        <div class="cert">
+                            <i class="bi bi-hourglass-split"></i>
+                            ACCA UK
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="glass-card contact-card reveal">
+
+            <div class="section-label">
+                07 / Contact
+            </div>
+
+
+            <h2 class="contact-title">
+
+                Let's build something
+
+                <span class="gradient-text">
+                    valuable.
+                </span>
+
+            </h2>
+
+
+            <p class="contact-text">
+
+                Whether you need expertise in data analytics,
+                technology controls, cybersecurity, revenue assurance
+                or software development, I would be happy to connect.
+
+            </p>
+
+
+            <div class="contact-links">
+
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    <i class="bi bi-envelope"></i>
+                    Email Me
+                </a>
+
+                <a href="https://www.linkedin.com/in/YOUR_USERNAME/" target="_blank" class="contact-link">
+                    <i class="bi bi-linkedin"></i>
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" class="contact-link">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-7">
+
+                <div class="footer-name">
+                    Olumide Kayode
+                </div>
+
+                <div class="mt-1">
+                    Technology • Data • Cybersecurity • Revenue Assurance
+                </div>
+
+                <div class="mt-2">
+                    © <span id="year"></span> Olumide Kayode. All rights reserved.
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <div class="social-links">
+
+                    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="social-link">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/YOUR_USERNAME/" target="_blank" class="social-link">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="#contact" class="social-link">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<a href="#home" id="backTop">
+    <i class="bi bi-arrow-up"></i>
+</a>
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+    /* =========================================================
+       CURRENT YEAR
+    ========================================================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================================================
+       SCROLL PROGRESS
+    ========================================================== */
+
+    const progress =
+        document.getElementById("scrollProgress");
+
+
+    window.addEventListener("scroll", () => {
+
+        const scrollTop =
+            window.scrollY;
+
+        const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        const percentage =
+            (scrollTop / height) * 100;
+
+        progress.style.width =
+            percentage + "%";
+
+    });
+
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================== */
+
+    const backTop =
+        document.getElementById("backTop");
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+
+            backTop.classList.add("show");
+
+        } else {
+
+            backTop.classList.remove("show");
+
+        }
+
+    });
+
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: .12
+            }
+        );
+
+
+    revealElements.forEach((element) => {
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================================
+       SKILL BARS
+    ========================================================== */
+
+    const skillBars =
+        document.querySelectorAll(
+            ".skill-progress"
+        );
+
+
+    const skillObserver =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.width =
+                            entry.target.dataset.width;
+
+                        skillObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: .5
+            }
+        );
+
+
+    skillBars.forEach((bar) => {
+
+        skillObserver.observe(bar);
+
+    });
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+    ========================================================== */
+
+    const sections =
+        document.querySelectorAll(
+            "section[id]"
+        );
+
+
+    const navLinks =
+        document.querySelectorAll(
+            ".nav-link"
+        );
+
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach((section) => {
+
+            const sectionTop =
+                section.offsetTop - 180;
+
+            if (window.scrollY >= sectionTop) {
+
+                current =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navLinks.forEach((link) => {
+
+            link.classList.remove("active");
+
+
+            if (
+                link.getAttribute("href")
+                === "#" + current
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================== */
+
+    navLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            const nav =
+                document.getElementById("mainNav");
+
+
+            if (
+                nav.classList.contains("show")
+            ) {
+
+                const collapse =
+                    bootstrap.Collapse
+                        .getInstance(nav);
+
+
+                if (collapse) {
+
+                    collapse.hide();
+
+                }
+
+            }
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
